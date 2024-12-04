@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>BanCode Inicia sesión</title>
+</head>
+
+<body>
+    <!--contendeor izquierdo-->
+    <section class="contenedorIngreso">
+        <!--titulo-->
+        <section class="contenedorFormLogin">
+
+            <h1 class="tituloIngresa">Ingresa</h1>
+            <!--barra para escribir el usuario-->
+
+            <form id="formLogin">
+                <input class="usuario" placeholder="Usuario" type="email" id="usuario" required>
+                <input class="contrasena" placeholder="Contraseña" type="password" id="contrasena" required>
+                <!-- enlace de olvidaste la contraseña -->
+                <a class="olvidaste" href="#">¿Olvidó su contraseña?</a>
+                <!-- botón de ingresar -->
+                <button type="submit" class="ingresar">Ingresar</button>
+                <div class="btnHome">Pagina Principal</div>
+            </form>
+            <div id="error" style="color: red; margin-top: 10px;"></div>
+            
+
+        </section>
+
+    </section>
+    
+    <aside>
+        <!--contenedor derecho-->
+        <section class="sectionAside">
+            <!-- titulo-->
+            <h2 class="tituloHola">Hola, Bienvenido!</h2>
+            <!-- texto -->
+            <p class="texto">Construyamos tu futuro juntos, que esperas y únete a BanCode!</p>
+            <!-- boton de registro-->
+            <button class="registro">Registrate</a></button>
+        </section>
+    </aside>
+
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

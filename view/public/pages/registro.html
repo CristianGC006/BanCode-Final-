@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title> BanCode Registrate</title>
+</head>
+
+<body>
+    <aside>
+        <!-- izquierda contenedor -->
+        <section class="sectionAside">
+            <!-- titulo -->
+            <h1 class="cuenta">
+                ¿Ya tienes una cuenta?
+            </h1>
+            <!-- texto -->
+            <p class="datos">
+                Ingresa tus datos
+            </p>
+            <!-- boton de ingreso -->
+            <button class="ingresar">Ingresar</button>
+        </section>
+    </aside>
+    
+    <section class="contenedorRegistro">
+        <!-- contenedor derecha  -->
+        <section class="cuadroRegistro">
+            <!-- titulo -->
+            <h2 class="registrate">
+                Registrate
+            </h2>
+            <!-- subtitulo de ingresar el usuario -->
+            <h4 class="tituloUsuario">Ingrese su usuario o correo electronico</h4>
+            <!-- barra para escribir el usuario-->
+            <form id="formRegistro">
+                <input class="usuario" placeholder="Usuario" type="email" id="email" required>
+                <h4 class="tituloContrasena">Ingrese su contraseña</h4>
+                <input class="contrasena" placeholder="Contraseña" type="password" id="password" required>
+                <span id="spanForm">La contrasa debe contener 8 digitos, una mayuscula <br>
+                    y un caracter especial</span>
+                <input class="verificar" placeholder="Verifique su contraseña" type="password" id="passwordConfirm" required>
+                <div id="error" style="color: red; margin-top: 10px;"></div>
+                <button type="submit" class="ingreso">Registrar</button>
+                <div class="btnHome">Pagina Principal</div>
+                
+            </form>
+            
+            
+    </section>
+    <script type="module" src="../js/registro.js"></script>
+</body>
+
+</html>
