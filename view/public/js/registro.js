@@ -64,20 +64,7 @@ function mostrarExito(input) {
     errorDiv.textContent = "";
 }
 
-// Validar el formulario completo antes de enviarlo
-formRegistro.addEventListener("submit", (event) => {
-    validarEmail();
-    validarPassword();
-    validarPasswordConfirm();
 
-    const errores = formRegistro.querySelectorAll(".error");
-    if (errores.length > 0) {
-        event.preventDefault(); // Evitar el envío si hay errores
-        errorDiv.textContent = "Por favor, corrige los errores antes de continuar.";
-    } else {
-        alert("Registro exitoso");
-    }
-});
 // btn registrate funcion
 document.querySelector('.ingresar').onclick = function() {
     window.location.href = 'login.html';
@@ -89,16 +76,14 @@ document.querySelector('.btnHome').onclick = function() {
 };
 
 //captura de datos 
-
-
 formRegistro.addEventListener("submit", (event) => {
+    event.preventDefault(); // Evitar el envío del formulario y la recarga de la página
     validarEmail();
     validarPassword();
     validarPasswordConfirm();
 
     const errores = formRegistro.querySelectorAll(".error");
     if (errores.length > 0) {
-        event.preventDefault(); // Evitar el envío si hay errores
         errorDiv.textContent = "Por favor, corrige los errores antes de continuar.";
     } else {
         // Captura de datos y muestra en consola
