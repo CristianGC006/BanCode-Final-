@@ -6,6 +6,7 @@ const passwordInput = document.getElementById("password");
 const passwordConfirmInput = document.getElementById("passwordConfirm");
 const errorDiv = document.getElementById("error");
 
+
 // Validar campos en tiempo real
 emailInput.addEventListener("input", validarEmail);
 passwordInput.addEventListener("input", validarPassword);
@@ -86,3 +87,28 @@ document.querySelector('.ingresar').onclick = function() {
 document.querySelector('.btnHome').onclick = function() {
     window.location.href = '../../../../index.html';
 };
+
+//captura de datos 
+
+formRegistro.addEventListener("submit", (event) => {
+    validarEmail();
+    validarPassword();
+    validarPasswordConfirm();
+
+    const errores = formRegistro.querySelectorAll(".error");
+    if (errores.length > 0) {
+        event.preventDefault(); // Evitar el envío si hay errores
+        errorDiv.textContent = "Por favor, corrige los errores antes de continuar.";
+    } else {
+        // Captura de datos y muestra en consola
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
+        const passwordConfirm = passwordConfirmInput.value.trim();
+
+        console.log("Email:", email);
+        console.log("Contraseña:", password);
+        console.log("Confirmación de Contraseña:", passwordConfirm);
+
+        alert("Registro exitoso");
+    }
+});
