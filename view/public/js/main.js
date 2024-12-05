@@ -21,6 +21,9 @@ document.querySelector('.botonHazteCliente2').onclick = function() {
 };
 
 //Boton de Formulario de Registro de Empresas
-document.querySelector('.botonEmpresas').onclick = function() {
-    window,location.href="view/public/pages/empresas.html";
-};
+var botonEmpresas = document.querySelector('.botonEmpresas');
+if (botonEmpresas) {
+    botonEmpresas.onclick = function() {
+        window.location.href = "view/public/pages/empresas.html";
+    };
+}

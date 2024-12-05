@@ -65,23 +65,3 @@ document.querySelector('.registro').onclick = function() {
 document.querySelector('.btnHome').onclick = function() {
     window.location.href = '../../../../index.html';
 };
-// Modo noche
-const btnModoNoche = document.getElementById("modoNoche");
-
-btnModoNoche.addEventListener("click", () => {
-    document.body.classList.toggle("noche");
-
-    // Guardar el estado del modo noche en localStorage
-    if (document.body.classList.contains("noche")) {
-        localStorage.setItem("modoNoche", "true");
-    } else {
-        localStorage.setItem("modoNoche", "false");
-    }
-});
-
-// Cargar el estado del modo noche al cargar la página
-window.addEventListener("load", () => {
-    if (localStorage.getItem("modoNoche") === "true") {
-        document.body.classList.add("noche");
-    }
-});
