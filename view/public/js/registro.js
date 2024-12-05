@@ -86,3 +86,9 @@ document.querySelector('.ingresar').onclick = function() {
 document.querySelector('.btnHome').onclick = function() {
     window.location.href = '../../../../index.html';
 };
+
+//captura de datos 
+<form id="formRegistro">
+
+
+</form>
